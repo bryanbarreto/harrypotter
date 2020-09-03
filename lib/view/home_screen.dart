@@ -1,4 +1,6 @@
+import 'package:HP/view/casas.dart';
 import 'package:HP/view/chapeu_seletor.dart';
+import 'package:HP/view/personagens.dart';
 import 'package:flutter/material.dart';
 
 import 'feiticos.dart';
@@ -50,7 +52,15 @@ class HomeScreen extends StatelessWidget {
                   _buildButton(
                     context: context,
                     imageUrl: 'assets/casas-hogwarts.png',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return Casas();
+                          },
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),
@@ -76,7 +86,15 @@ class HomeScreen extends StatelessWidget {
                   _buildButton(
                     context: context,
                     imageUrl: 'assets/personagens.png',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return Personagens();
+                          },
+                        ),
+                      );
+                    },
                   ),
                 ],
               )
